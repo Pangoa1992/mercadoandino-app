@@ -6,7 +6,7 @@ const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const app = express();
 const s3 = new S3Client({ region: "us-east-1" }); // credenciales desde LabInstanceProfile
 
-app.get("/", (req, res) => res.send("MercadoAndino v1 - instancia " + os.hostname()));
+app.get("/", (req, res) => res.send("MercadoAndino v2 - instancia " + os.hostname()));
 app.get("/health", (req, res) => res.status(200).send("ok"));
 
 // Operacion 01.5: URL prefirmada (5 min) para que el vendedor suba su foto directo a S3
